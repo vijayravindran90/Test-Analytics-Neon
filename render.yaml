@@ -1,0 +1,22 @@
+services:
+  - type: web
+    name: test-analytics-backend
+    runtime: node
+    plan: free
+    rootDir: .
+    buildCommand: npm run install-all && npm run build
+    startCommand: npm run db:migrate -w packages/backend && npm run start -w packages/backend
+    autoDeploy: true
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: PORT
+        value: 10000
+      - key: DATABASE_URL
+        sync: false
+      - key: JWT_SECRET
+        sync: false
+      - key: FRONTEND_URL
+        sync: false
+      - key: ADMIN_KEY
+        sync: false
