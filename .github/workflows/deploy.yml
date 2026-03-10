@@ -40,8 +40,9 @@ jobs:
         env:
           # Set this secret in GitHub repository settings to your Render backend URL + /api
           # Example: https://your-service.onrender.com/api
-          #REACT_APP_API_URL: ${{ secrets.REACT_APP_API_URL || 'https://your-backend-url.com/api' }}
-          REACT_APP_API_URL: https://your-render-service.onrender.com/api
+          VITE_API_URL: ${{ secrets.VITE_API_URL || 'https://test-analytics-neon.onrender.com/api' }}
+          # Use / for custom root domain. Keep repo path while custom domain is not active.
+          VITE_BASE_PATH: ${{ secrets.VITE_BASE_PATH || '/Test-Analytics-Neon/' }}
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3

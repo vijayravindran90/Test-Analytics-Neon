@@ -11,7 +11,7 @@ jobs:
     runs-on: ubuntu-latest
     
     env:
-      ANALYTICS_API_URL: https://your-render-service.onrender.com/
+      ANALYTICS_API_URL: https://test-analytics-neon.onrender.com/
       PROJECT_ID: ${{ secrets.PROJECT_ID || github.repository }}
       PROJECT_NAME: ${{ github.event.repository.name }}
       API_KEY: ${{ secrets.ANALYTICS_API_KEY }}
