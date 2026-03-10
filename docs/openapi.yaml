@@ -11,7 +11,7 @@ info:
 servers:
   - url: http://localhost:3001
     description: Local development
-  - url: https://your-render-service.onrender.com
+  - url: https://test-analytics-neon.onrender.com
     description: Production (example)
 tags:
   - name: Health

@@ -27,7 +27,7 @@ export default function Header({ theme, onToggleTheme }: HeaderProps) {
             </Link>
           )}
           <a
-            href="https://github.com/vijayravindran90/Test-analytics/blob/main/docs/architecture.md"
+            href="https://github.com/vijayravindran90/Test-Analytics-Neon/blob/main/docs/architecture.md"
             target="_blank"
             rel="noreferrer"
             className="text-neutral-600 hover:text-neutral-900"

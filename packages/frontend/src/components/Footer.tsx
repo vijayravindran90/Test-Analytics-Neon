@@ -7,7 +7,7 @@ export default function Footer() {
       <div className="container mx-auto flex items-center justify-between px-4 py-4">
         <p className="text-sm text-neutral-600">Copyright (c) 2026 Vijay Ravindran</p>
         <a
-          href="https://github.com/vijayravindran90/Test-analytics"
+          href="https://github.com/vijayravindran90/Test-Analytics-Neon"
           target="_blank"
           rel="noreferrer"
           aria-label="Open GitHub repository"
