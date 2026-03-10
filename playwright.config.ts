@@ -24,11 +24,11 @@ export default defineConfig({
   reporter: [
     ['html'],
     [
-      '@test-analytics-neon/reporter',
+      './packages/reporter/src/reporter.ts',
       {
         backendUrl: 'https://test-analytics-neon.onrender.com/api',
-        projectId: '296ff5f9-a0a5-46ac-8117-fb45c42e7e8e',
-        projectName: 'Playwright Test',
+        projectId: '8c3069fb-ffd0-4fed-af7e-29298ee7597d',
+        projectName: 'Demo',
         apiKey: process.env.API_KEY,
         enabled: true,
       },

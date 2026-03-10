@@ -26,7 +26,7 @@ export class ProjectService {
 
   async getProject(projectId: string, userId?: string): Promise<Project | null> {
     const result = await pool.query(
-      'SELECT * FROM projects WHERE id = $1 AND ($2::uuid IS NULL OR user_id = $2::uuid)',
+      'SELECT * FROM projects WHERE id = $1 AND ($2::uuid IS NULL OR user_id = $2::uuid OR user_id IS NULL)',
       [projectId, userId || null]
     );
 
@@ -39,7 +39,7 @@ export class ProjectService {
 
   async getProjectByName(name: string, userId?: string): Promise<Project | null> {
     const result = await pool.query(
-      'SELECT * FROM projects WHERE name = $1 AND ($2::uuid IS NULL OR user_id = $2::uuid)',
+      'SELECT * FROM projects WHERE name = $1 AND ($2::uuid IS NULL OR user_id = $2::uuid OR user_id IS NULL)',
       [name, userId || null]
     );
 
@@ -52,7 +52,7 @@ export class ProjectService {
 
   async getAllProjects(userId?: string): Promise<Project[]> {
     const result = await pool.query(
-      'SELECT * FROM projects WHERE ($1::uuid IS NULL OR user_id = $1::uuid) ORDER BY updated_at DESC',
+      'SELECT * FROM projects WHERE ($1::uuid IS NULL OR user_id = $1::uuid OR user_id IS NULL) ORDER BY updated_at DESC',
       [userId || null]
     );
 
