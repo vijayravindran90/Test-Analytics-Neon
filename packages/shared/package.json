@@ -15,7 +15,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/vijayravindran90/Test-Analytics-Neon.git",
+    "url": "git+https://github.com/vijayravindran90/Test-Analytics-Neon.git",
     "directory": "packages/shared"
   },
   "keywords": [
