@@ -4,7 +4,7 @@ services:
     runtime: node
     plan: free
     rootDir: .
-    buildCommand: npm run install-all && npm run build
+    buildCommand: npm install --include=dev && npm run build
     startCommand: npm run db:migrate -w packages/backend && npm run start -w packages/backend
     autoDeploy: true
     envVars:

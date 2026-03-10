@@ -26,7 +26,7 @@ export default defineConfig({
     [
       '@test-analytics-neon/reporter',
       {
-        backendUrl: 'https://your-render-service.onrender.com/api',
+        backendUrl: 'https://test-analytics-neon.onrender.com/api',
         projectId: '296ff5f9-a0a5-46ac-8117-fb45c42e7e8e',
         projectName: 'Playwright Test',
         apiKey: process.env.API_KEY,
